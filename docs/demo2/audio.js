@@ -37,8 +37,11 @@ Loader.prototype.loadBuffer = function () {
 // 読み込んだ音声データ(バッファ)を再生する。
 Loader.prototype.playSound = function (buffer) {
   var sourceNode = audioCtx.createBufferSource(); // AudioBufferSourceNode(入力)を作成
+  var gainNode = audioCtx.createGain();           // 音量を調整するGainNodeを生成する
   sourceNode.buffer = buffer;                     // 取得した音声データ(バッファ)を音源に設定
-  sourceNode.connect(audioCtx.destination);       // AudioBufferSourceNodeをAudioDestinationNode(出力)に接続
+  sourceNode.connect(gainNode);                   // sourceNodeをGainNodeに接続
+  gainNode.gain.value = 0.3;                      // 音量を変更
+  gainNode.connect(audioCtx.destination);         // gainNodeをAudioDestinationNode(出力)に接続
   sourceNode.start(0);                            // 再生開始
 };
 
