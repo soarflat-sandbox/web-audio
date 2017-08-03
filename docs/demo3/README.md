@@ -1,4 +1,4 @@
-# Web AudioのgetByteFrequencyDataで取得する配列のどの要素がどの周波数(Hz)の波形データを格納しているか確認する
+# Web AudioのgetByteFrequencyDataで取得する配列の、どの要素がどの周波数(Hz)の波形データを格納しているか確認する
 <img src="../../README_resources/web-audio/demo3.jpg">
 
 [デモ](https://soarflat-prototype.github.io/web-audio/demo3/index.html)**(ページを開くと音が流れるので音量注意)**
@@ -10,7 +10,7 @@
 # getByteFrequencyDataで取得する配列のどの要素がどの周波数(Hz)の波形データを格納しているか確認する
 デモのようなWeb Audioでオーディオビジュアライザーを制作する際に、以下のように`getByteFrequencyData`で周波数領域の波形データ(スペクトル)を取得すると思います。
 
-```js:
+```javascript
 var audioCtx = new AudioContext();
 var analyser = audioCtx.createAnalyser();
 var bufferLength;
@@ -38,7 +38,7 @@ for(var i = 0; i < bufferLength; i++) {
 
 `AnalyserNode`の`fftSize`は2048であり、`frequency`配列の要素は1024個のため、0Hz~22028Hzの波形データが格納されています。
 
-```js:
+```javascript
 for(var i = 0; i < bufferLength; i++) {
   value = frequency[i]; // (i * 44100 / 2048)Hzの波形データ 0 ~ 255が格納されている。
 }
