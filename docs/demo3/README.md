@@ -1,7 +1,7 @@
 # Web AudioのgetByteFrequencyDataで取得する配列のどの要素がどの周波数(Hz)の波形データを格納しているか確認する
 <img src="../../README_resources/web-audio/demo3.jpg">
 
-[デモ](http://hira777.github.io/qiita/web-audio/demo3/index.html)**(ページを開くと音が流れるので音量注意)**
+[デモ](https://soarflat-prototype.github.io/web-audio/demo3/index.html)**(ページを開くと音が流れるので音量注意)**
 
 上のビジュアライザーは**0Hz~約20000Hz**、下のビジュアライザーは**0Hz~約2000Hz**の範囲の波形データを描画しているものです。(下のビジュアライザーは少し描画を調整しています。)
 
