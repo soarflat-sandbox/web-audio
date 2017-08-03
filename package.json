@@ -1,0 +1,13 @@
+{
+  "name": "web-audio",
+  "version": "1.0.0",
+  "description": "Web Audioを利用したちょっとしたサンプルを置いているリポジトリ",
+  "scripts": {
+    "start": "http-server -o"
+  },
+  "author": "soarflat",
+  "license": "MIT",
+  "devDependencies": {
+    "http-server": "^0.10.0"
+  }
+}

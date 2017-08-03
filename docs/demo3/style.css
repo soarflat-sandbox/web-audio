@@ -1,0 +1,16 @@
+body {
+  background: #000;
+  margin: 0;
+  overflow: hidden;
+  color: #fff;
+}
+
+a {
+  color: #fff;
+}
+
+.link {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
